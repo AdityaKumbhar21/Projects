@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class = "bg-gray-800">
+
+    <h1 class = "text-white text-6xl font-bold text-center mt-4">Welcome to the Todo App</h1>
+    <div class = "flex flex-col gap-6">
+        <div class="flex flex-col mt-9 items-center  w-screen">
+            <h3 class="text-white text-2xl text-center font -semibold">Add a Todo</h3>
+
+            <!--Add a todo Form -->
+
+            <form id = "add-form" class = "flex flex-row gap-4 ml-4 bg-gray-200 h-20 w-130 rounded-lg mt-4 font-semibold text-gray-900 p-2 inset-shadow-lg inset-shadow-gray-500" action="">
+                <div class="flex flex-col">
+                    <label class = "text-center"  for="todo-name">Todo Name</label>
+                    <input  class= " shadow-blue-400 border border-solid-2 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900" id = "todo-name" type="text" required>
+                </div>
+                <div class="flex flex-col">
+                    <label class = "text-center" id = "label-todo-desc" for="todo-desc">Todo Description</label>
+                    <textarea class="border border-solid-2 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-900" name="todo_desc" id="todo-desc"></textarea>
+                </div>
+    
+                <button type = 'submit' class = "bg-gray-900 rounded-lg text-white mt-4 h-12 px-3 py-3 text-center hover:bg-gray-700 hover:cursor-pointer transition duration-300">Add</button>
+            </form>
+        </div>
+
+        <div id = "todo-container" class = " self-center bg-gray-900 w-200  flex flex-col gap-4 items-center h-100 rounded-lg shadow-inner shadow-black overflow-y-auto hide-scrollbar pb-4">
+               
+        </div>
+    </div>
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
