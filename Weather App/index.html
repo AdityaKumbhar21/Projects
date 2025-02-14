@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body >
-    <div class = "bg-[url('bg-2.jpg')] bg-cover h-[750px] w-full bg-gradient-to-r from-white/50 via-gray-500/50 to-black/50 flex flex-row items-center justify-center">
-        <div class = "bg-cyan-600 w-[650px] h-[300px] rounded-lg shadow-md shadow-black flex flex-col gap-2"> 
-                <div class = "text-2xl font-semibold text-center  mt-3 opacity-100">Today's Weather</div>
-                <div class = "flex flex-row justify-around items-center">
-                    <div class = "text-2xl font-semibold text-center w-[150px] h-[150px] bg-white ml-2  mt-3 opacity-100 rounded-lg shadow-md shadow-black ">Temp</div>
-                    <div class = "text-2xl font-semibold text-center w-[150px] h-[150px] bg-white ml-2  mt-3 opacity-100 rounded-lg shadow-md shadow-black ">Temp in F</div>
-                    <div class = "text-2xl font-semibold text-center w-[150px] h-[150px] bg-white ml-2  mt-3 opacity-100 rounded-lg shadow-md shadow-black ">Humidity</div>
-                </div>
-                <div class = "text-2xl font-semibold text-center  mt-3 opacity-100">Today's Weather</div>
+<body class="flex justify-center items-center h-screen bg-cover bg-center" style="background-image: url('bg-2.jpg');">
+
+    <div class="bg-white/10 backdrop-blur-lg w-[700px] h-[350px] rounded-xl shadow-lg shadow-black/50 flex flex-col p-6">
+        
+        
+        <h1 id = "title" class="text-3xl font-bold text-white text-center drop-shadow-lg">🌤 Today's Weather</h1>
+
+        
+        <div class="flex flex-row justify-between items-center mt-6 px-4">
+            
+            <div class="w-40 h-40 bg-white/20 rounded-lg flex flex-col justify-center items-center shadow-lg backdrop-blur-md">
+                <p class="text-white text-lg font-semibold">Temperature</p>
+                <p id = "temp" class="text-white text-2xl font-bold">0°C</p>
+            </div>
+
+            <div class="w-40 h-40 bg-white/20 rounded-lg flex flex-col justify-center items-center shadow-lg backdrop-blur-md">
+                <p class="text-white text-lg font-semibold drop-shadow-lg">Humidity</p>
+                <p id = "humid" class="text-white text-2xl font-bold">0°F</p>
+            </div>
+
+            <div class="w-40 h-40 bg-white/20 rounded-lg flex flex-col justify-center items-center shadow-lg backdrop-blur-md">
+                <p class="text-white text-lg font-semibold">AIQ</p>
+                <p id = "aiq" class="text-white text-2xl font-bold">0%</p>
+                <p id = "aiq-desc" class="text-white text-2xl font-bold"></p>
+            </div>
 
         </div>
+
+        
+        <p id = "info" class="text-white text-center text-lg mt-4 opacity-80">🌎 Stay Updated with Live Weather Data</p>
+
     </div>
 
-    
+    <script src="index.js"></script>
 </body>
 </html>
